@@ -1,4 +1,4 @@
-# Bioinformatics-Training
+# Bioinformatics Training
 
 Implementation of common algorithms for sequence analysis including quality control, assembly, and alignment.
 
@@ -55,7 +55,7 @@ This script is ideal for learning and testing basic DNA sequence alignment metho
 
 ---
 
-## 4) Matching.py
+## 4) Motif-Search.py
 
 Implements multiple motif-finding algorithms for bioinformatics applications:
 
