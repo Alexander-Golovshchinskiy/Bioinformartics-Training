@@ -1,49 +1,74 @@
-# Bioinformartics-Training
-Implementation of common algorithms for sequence analysis - quality control, assembly, alignment
+# Bioinformatics-Training
 
-1) Base Qualities.py - A Python script for basic quality control and sequence composition analysis of FASTQ files. 
+Implementation of common algorithms for sequence analysis including quality control, assembly, and alignment.
 
-- Reads FASTQ files and extracts sequences and Phred+33 quality scores
+---
 
-- Generates a quality score histogram to visualize overall read quality
+## 1) Base Qualities.py
 
-- Computes GC content by position across all reads and plots it
+A Python script for basic quality control and sequence composition analysis of FASTQ files.
 
-- Counts base frequencies (A, T, G, C, N) across all sequences
+- Reads FASTQ files and extracts sequences and Phred+33 quality scores  
+- Generates a quality score histogram to visualize overall read quality  
+- Computes GC content by position across all reads and plots it  
+- Counts base frequencies (A, T, G, C, N) across all sequences  
 
+**Testing data:**  
+Source FASTQ file `ERR037900_1.first1000.fastq` from Coursera Genomics Specialisation.
 
-2) Assembly.py -  A Python implementation of greedy shortest common superstring (SCS) genome assembly using read overlaps. 
+---
 
-- Reads FASTQ files and extracts sequences
+## 2) Assembly.py
 
-- Finds maximal pairwise overlaps between reads using a k-mer index
+A Python implementation of greedy shortest common superstring (SCS) genome assembly using read overlaps.
 
-- Greedily merges reads to assemble a genome-like superstring
+- Reads FASTQ files and extracts sequences  
+- Finds maximal pairwise overlaps between reads using a k-mer index  
+- Greedily merges reads to assemble a genome-like superstring  
+- Reports assembly statistics such as total length and base counts  
 
-- Reports assembly statistics, such as total length and base counts
+**Testing data:**  
+Custom synthetic short reads sourced from a module in Coursera Bioinformatics Specialisation.
 
-This is a simplified assembler that could be useful for educational purposes / small-scale synthetic datasets.
+---
 
-3) Genome Search - Naive Matching.py - A toolkit for naive read alignment and search in DNA sequences.
+## 3) Genome Search - Naive Matching.py
 
-This script provides a foundational framework for understanding how read mapping and pattern matching work in bioinformatics, using:
+A toolkit for naive read alignment and search in DNA sequences.
 
-- Exact and approximate pattern matching
+Provides a foundational framework for understanding read mapping and pattern matching using:
 
-- Support for reverse complements
+- Exact and approximate pattern matching  
+- Support for reverse complements  
+- Synthetic and real read input  
+- Match reporting and summary statistics  
 
-- Synthetic and real read input
+**Testing data:**  
+Custom short sequences aligned approximately to the Lambda virus genome reference.
 
-- Match reporting and summary statistics
+**Example use cases:**  
+- Generate artificial reads from a viral genome and align them exactly  
+- Load real Illumina reads and check for exact or reverse complement matches  
+- Search for short patterns allowing mismatches (e.g. mutation-tolerant motifs)  
 
-##### Example Use Cases
-- Generate artificial reads from a viral genome and align them exactly
+This script is ideal for learning and testing basic DNA sequence alignment methods without relying on complex tools like BWA or Bowtie.
 
-- Load real Illumina reads and check for exact or reverse complement matches
+---
 
-- Search for short patterns allowing mismatches (e.g. mutation-tolerant motifs)
+## 4) Matching.py
 
-- This script is ideal for learning and testing basic DNA sequence alignment methods without relying on complex tools like BWA or Bowtie.
+Implements multiple motif-finding algorithms for bioinformatics applications:
 
+- **Gibbs Sampling**  
+- **Randomized Motif Search**  
+- Utilities for scoring, profile creation, and k-mer selection  
 
+**Testing data:**  
+Custom artificially created DNA sequences.
 
+---
+
+## Usage (for all scripts)
+
+```bash
+python motif_search.py
