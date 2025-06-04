@@ -71,4 +71,4 @@ Custom artificially created DNA sequences.
 ## Usage (for all scripts)
 
 ```bash
-python motif_search.py
+python <name-of-the-file>.py
