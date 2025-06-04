@@ -28,7 +28,7 @@ A Python implementation of greedy shortest common superstring (SCS) genome assem
 - Reports assembly statistics such as total length and base counts  
 
 **Testing data:**  
-Custom synthetic short reads sourced from a module in Coursera Bioinformatics Specialisation.
+Custom synthetic short reads file `ads1_week4_reads.fq` sourced from a module in Coursera Bioinformatics Specialisation.
 
 ---
 
@@ -44,14 +44,14 @@ Provides a foundational framework for understanding read mapping and pattern mat
 - Match reporting and summary statistics  
 
 **Testing data:**  
-Custom short sequences aligned approximately to the Lambda virus genome reference.
+Custom short patterns (`ERR266411_1.first1000.fastq`) matched to the Lambda virus genome reference (`lambda_virus.fa`).
 
 **Example use cases:**  
 - Generate artificial reads from a viral genome and align them exactly  
 - Load real Illumina reads and check for exact or reverse complement matches  
 - Search for short patterns allowing mismatches (e.g. mutation-tolerant motifs)  
 
-This script is ideal for learning and testing basic DNA sequence alignment methods without relying on complex tools like BWA or Bowtie.
+This script can be useful for learning and testing basic DNA sequence alignment methods without relying on complex tools like BWA or Bowtie.
 
 ---
 
